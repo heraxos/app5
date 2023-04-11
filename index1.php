@@ -318,3 +318,4 @@ if (empty($_POST['name'])) {
   
   setcookie('save', '1');
   header('Location: index1.php');
+}
