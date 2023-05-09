@@ -265,7 +265,7 @@ if (empty($_POST['name'])) {
   }
   else {
     // Генерируем уникальный логин и пароль.
-    $sth = $db->prepare("SELECT login FROM users5");
+    $sth = $db->prepare("SELECT login FROM user5");
     $sth->execute();
     $login_array = $sth->fetchAll(PDO::FETCH_COLUMN);
     $flag=true;
@@ -303,7 +303,7 @@ if (empty($_POST['name'])) {
             $s,
           ));
         }
-      $stmt = $db->prepare("INSERT INTO users5 SET login = ?, pass = ?");
+      $stmt = $db->prepare("INSERT INTO user5 SET login = ?, pass = ?");
       $stmt -> execute(array(
           $login,
           $hash,
